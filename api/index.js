@@ -1,5 +1,6 @@
 import express from 'express';
 import { handleEvents, printPrompts } from '../app/index.js';
+import getGanttHtml from '../app/web/gantt.js';
 import config from '../config/index.js';
 import { validateLineSignature } from '../middleware/index.js';
 import storage from '../storage/index.js';
@@ -25,6 +26,10 @@ app.get('/info', async (req, res) => {
   const currentVersion = getVersion();
   const latestVersion = await fetchVersion();
   res.status(200).send({ currentVersion, latestVersion });
+});
+
+app.get('/gantt', (req, res) => {
+  res.status(200).type('html').send(getGanttHtml());
 });
 
 app.post(config.APP_WEBHOOK_PATH, validateLineSignature, async (req, res) => {
