@@ -29,6 +29,11 @@ GPT AI Assistant is an application that is implemented using the OpenAI API and 
 
 If there is any question, please contact me at memochou1993@gmail.com. Thank you.
 
+
+## Product Planning
+
+- [多專案甘特圖進度系統（MVP 規劃）](docs/gantt-system-plan.md)
+
 ## Changelog
 
 Detailed changes for each release are documented in the [release notes](https://github.com/memochou1993/gpt-ai-assistant/releases).
